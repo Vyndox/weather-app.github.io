@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  .dark-mode {
+    background-color: #111;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: scaleIn 1s ease;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 300px;
+  }
+  
+  #search-input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  #search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  #search-btn {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    margin-left: -1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  #search-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  #search-btn:active {
+    background-color: #004080;
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  
+  .weather-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    animation: fadeIn 1s ease;
+  }
+  
+  .visible {
+    display: flex;
+  }
+  
+  .location {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: slideIn 1s ease;
+  }
+  
+  .temperature {
+    font-size: 4rem;
+    font-weight: bold;
+    animation: scaleIn 1s ease;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    animation: slideIn 1s ease;
+  }
+  
+  .icon {
+    font-size: 6rem;
+    margin-top: 2rem;
+    animation: rotate 4s infinite linear;
+  }
+
+  .weather-container .icon img {
+    width: 100px;
+    height: 100px; 
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  } 
+  
+  
+  .warning {
+    opacity: 0;
+    color: #dc3545;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    transition: opacity 0.3s ease;
+    animation: fadeIn 1s ease;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .warning.show {
+    opacity: 1;
+    animation: fadeOut 1s ease 3s forwards;
+  }
+  
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+  
